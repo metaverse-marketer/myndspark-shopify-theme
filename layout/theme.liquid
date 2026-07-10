@@ -19,9 +19,33 @@
 
   {{ content_for_header }}
 
-  {{ 'myndspark.css' | asset_url | stylesheet_tag }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  {{ 'myndspark.css' | asset_url | stylesheet_tag }}
+
+  {% comment %}Design tokens — rendered here because .css assets don't process Liquid{% endcomment %}
+  <style>
+    :root {
+      --color-primary: {{ settings.color_primary | default: '#2E4CC8' }};
+      --color-primary-dark: {{ settings.color_primary_dark | default: '#1F379E' }};
+      --color-secondary: {{ settings.color_secondary | default: '#3DB8AB' }};
+      --color-accent: {{ settings.color_accent | default: '#E8B23A' }};
+      --color-bg: {{ settings.color_bg_light | default: '#FAFBFE' }};
+      --color-text: {{ settings.color_text | default: '#23283A' }};
+      --color-text-light: {{ settings.color_text_light | default: '#565B73' }};
+      --color-white: {{ settings.color_white | default: '#FFFFFF' }};
+      --color-border: {{ settings.color_border | default: '#E7EAF2' }};
+      --color-tint: {{ settings.color_tint | default: '#EEF1FB' }};
+      --color-dark: {{ settings.color_dark | default: '#16265A' }};
+      --color-darker: {{ settings.color_darker | default: '#10193A' }};
+      --font-heading: 'Hanken Grotesk', system-ui, sans-serif;
+      --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+    }
+    .site-header__logo img { max-width: {{ settings.logo_width | default: 160 }}px; height: auto; }
+  </style>
 
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -42,7 +66,7 @@
 
   <a class="skip-to-content" href="#MainContent">Skip to content</a>
 
-  {% sections 'header-group' %}
+  {% sections 'site-header' %}
 
   <main id="MainContent" class="main-content" role="main">
     {{ content_for_layout }}

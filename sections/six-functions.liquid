@@ -1,0 +1,58 @@
+{% schema %}
+{
+  "name": "Six Functions",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Eyebrow Label",
+      "default": "One kit, six functions"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Train every area of the brain"
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Each activity is color-coded to the brain function it targets — so you always know you're building a balanced routine. The kit combines activities to work multiple functions at once, forging new connections."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (activity cards)"
+    }
+  ],
+  "presets": [{ "name": "Six Functions" }]
+}
+{% endschema %}
+
+<section class="six-functions">
+  <div class="container">
+    <div class="six-functions__inner">
+      <div class="six-functions__content">
+        <span class="mono-label">{{ section.settings.label }}</span>
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings.body }}</p>
+        <div class="six-functions__legend">
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-attention);"></span><span>Attention</span></div>
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-memory);"></span><span>Memory</span></div>
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-logic);"></span><span>Logic &amp; Reasoning</span></div>
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-speech);"></span><span>Speech &amp; Language</span></div>
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-motor);"></span><span>Motor &amp; Balance</span></div>
+          <div class="six-functions__item"><span class="six-functions__swatch" style="background: var(--fn-visual);"></span><span>Visual Processing</span></div>
+        </div>
+      </div>
+      <div class="six-functions__image">
+        {% if section.settings.image %}
+          <img src="{{ section.settings.image | image_url: width: 900 }}" alt="Myndspark activity cards, color-coded by brain function" loading="lazy">
+        {% else %}
+          <img src="{{ 'cards-alt.png' | asset_url }}" alt="Myndspark activity cards, color-coded by brain function" loading="lazy" onerror="this.src='https://i0.wp.com/myndspark.com/wp-content/uploads/2022/04/CogET_Cards-Alt.png?w=1200&ssl=1'">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

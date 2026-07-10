@@ -5,9 +5,12 @@
 }
 {% endschema %}
 
-<section style="padding: 48px 0 80px;">
+<section class="collection-page">
   <div class="container">
-    <h1 style="font-size: 36px; margin-bottom: 32px;">{{ collection.title | default: 'All Products' }}</h1>
+    <div class="collection-header">
+      <span class="mono-label">Shop the kit</span>
+      <h1>{{ collection.title | default: 'All Products' }}</h1>
+    </div>
 
     <div class="showcase-grid">
       {% for product in collection.products %}

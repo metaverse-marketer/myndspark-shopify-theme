@@ -6,6 +6,17 @@
 }
 {% endschema %}
 
+<style>
+  .footer-social { display: flex; gap: 12px; margin-top: 16px; }
+  .footer-social a {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .footer-social a:hover { background: rgba(255,255,255,0.16); color: white; }
+</style>
+
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -16,6 +27,19 @@
           <span style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: white;">Myndspark</span>
         {% endif %}
         <p>A multisensory approach to improving brain function. Designed by occupational therapists for cognitive rehabilitation at home.</p>
+        {% if settings.social_facebook != blank or settings.social_instagram != blank or settings.social_youtube != blank %}
+          <div class="footer-social">
+            {% if settings.social_facebook != blank %}
+              <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener" aria-label="Myndspark on Facebook"><svg width="20" height="20"><use href="#icon-facebook"/></svg></a>
+            {% endif %}
+            {% if settings.social_instagram != blank %}
+              <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener" aria-label="Myndspark on Instagram"><svg width="20" height="20"><use href="#icon-instagram"/></svg></a>
+            {% endif %}
+            {% if settings.social_youtube != blank %}
+              <a href="{{ settings.social_youtube }}" target="_blank" rel="noopener" aria-label="Myndspark on YouTube"><svg width="20" height="20"><use href="#icon-youtube"/></svg></a>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
 
       <div class="footer-col">

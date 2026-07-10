@@ -30,11 +30,13 @@
 }
 {% endschema %}
 
-<section class="cta-section">
+<section class="cta-section cta-section--navy">
+  {% render 'node-motif', variant: 'cta' %}
   <div class="container">
+    <span class="mono-label">Start Today</span>
     <h2>{{ section.settings.heading }}</h2>
     <p>{{ section.settings.subheading }}</p>
-    <a href="{{ section.settings.button_url | default: '/products/myndspark-cognitive-efficiency-tool' }}" class="btn btn--primary btn--large">
+    <a href="{{ section.settings.button_url | default: '/products/myndspark-cognitive-efficiency-tool' }}" class="btn btn--on-dark btn--large">
       {{ section.settings.button_text }}
     </a>
   </div>

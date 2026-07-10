@@ -6,7 +6,9 @@
 {% endschema %}
 
 <div class="about-hero">
+  {% render 'node-motif', variant: 'hero' %}
   <div class="container">
+    <span class="mono-label">Our Story</span>
     <h1>About Myndspark</h1>
     <p style="font-size: 19px; color: var(--color-text-light); max-width: 700px; margin: 0 auto;">
       We're not just another brain game company. We build tools for people determined to rehabilitate their cognitive abilities after brain injuries.
@@ -22,6 +24,43 @@
     <p style="font-weight: 600; color: var(--color-primary);">— Katie &amp; Jacob</p>
   </div>
 </div>
+
+<section style="padding: 0 0 80px;" id="philosophy">
+  <div class="container">
+    <div class="section-header">
+      <span class="mono-label">Our Philosophy</span>
+      <h2>The Philosophy of Myndspark</h2>
+      <p>Our therapeutic activities are grounded in the science of how the brain heals.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-card__icon"><svg width="28" height="28"><use href="#icon-engage"/></svg></div>
+        <h3>Neurovascular Coupling</h3>
+        <p>Neurons and blood vessels are in constant communication. When the brain activates to perform a task, blood vessels deliver the oxygen and nutrients that region needs to function. A brain injury can dysregulate this coupling, restricting blood flow and reducing efficiency.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__icon"><svg width="28" height="28"><use href="#icon-multi-sensory"/></svg></div>
+        <h3>Multi-Sensory Activation</h3>
+        <p>Our Cognitive Efficiency Tool activates specific areas of the brain and creates strong multi-sensory connections. Combining hands-on, multisensory activities with physical exercise helps restore proper neurovascular communication and return the brain to optimal functioning.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__icon"><svg width="28" height="28"><use href="#icon-logic"/></svg></div>
+        <h3>Rebuilding Direct Pathways</h3>
+        <p>After an injury, the brain compensates by creating alternative routes &mdash; like taking backroads instead of the freeway. You still get there, but less efficiently, which can cause cognitive, physical, and emotional symptoms. Our tool helps reestablish those more direct pathways.</p>
+      </div>
+    </div>
+
+    <div style="max-width: 720px; margin: 56px auto 0; text-align: center;">
+      <span class="mono-label" style="display: block; margin-bottom: 12px; color: var(--color-secondary);">Our Story</span>
+      <p style="font-size: 17px; color: var(--color-text-light); line-height: 1.6;">
+        Myndspark is a family-owned business, and the whole family takes part. Our mission is simple: help people recovering from concussions and brain injuries rebuild, strengthen, and improve their brain health &mdash; from home.
+      </p>
+    </div>
+  </div>
+</section>
 
 <section style="padding: 0 0 80px;">
   <div class="container">
@@ -46,10 +85,12 @@
   </div>
 </section>
 
-<section class="cta-section">
+<section class="cta-section cta-section--navy">
+  {% render 'node-motif', variant: 'cta' %}
   <div class="container">
+    <span class="mono-label">Start Today</span>
     <h2>Experience Myndspark Today</h2>
     <p>Boost your brain power.</p>
-    <a href="/products/myndspark-cognitive-efficiency-tool" class="btn btn--primary btn--large">Get Your Kit — $210</a>
+    <a href="/products/myndspark-cognitive-efficiency-tool" class="btn btn--on-dark btn--large">Get Your Kit — $210</a>
   </div>
 </section>

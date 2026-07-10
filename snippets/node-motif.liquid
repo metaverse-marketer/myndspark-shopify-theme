@@ -1,0 +1,48 @@
+{% comment %}
+  Reusable connected-node ("molecule") motif — the Myndspark signature.
+  Usage:
+    {% render 'node-motif', variant: 'hero' %}   → light blue nodes for light sections
+    {% render 'node-motif', variant: 'cta' %}    → subtle navy nodes for dark sections
+{% endcomment %}
+
+{%- assign variant = variant | default: 'hero' -%}
+
+{%- if variant == 'cta' -%}
+  {%- assign line = '#3A5090' -%}
+  {%- assign node = '#22356E' -%}
+{%- else -%}
+  {%- assign line = '#CBD8F2' -%}
+  {%- assign node = '#DCE6FA' -%}
+  {%- assign node2 = '#E4ECFB' -%}
+{%- endif -%}
+
+<div class="node-motif node-motif--{{ variant }}" aria-hidden="true">
+  {%- if variant == 'cta' -%}
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="{{ line }}" stroke-width="2">
+        <circle cx="250" cy="120" r="24" fill="{{ node }}" stroke="none"/>
+        <circle cx="360" cy="200" r="14" fill="{{ node }}" stroke="none"/>
+        <circle cx="160" cy="230" r="11" fill="{{ node }}" stroke="none"/>
+        <circle cx="300" cy="320" r="30" fill="{{ node }}" stroke="none"/>
+        <circle cx="200" cy="380" r="16" fill="{{ node }}" stroke="none"/>
+        <line x1="250" y1="120" x2="360" y2="200"/><line x1="250" y1="120" x2="160" y2="230"/>
+        <line x1="160" y1="230" x2="300" y2="320"/><line x1="360" y1="200" x2="300" y2="320"/>
+        <line x1="300" y1="320" x2="200" y2="380"/>
+      </g>
+    </svg>
+  {%- else -%}
+    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="{{ line }}" stroke-width="2">
+        <circle cx="300" cy="140" r="26" fill="{{ node }}" stroke="none"/>
+        <circle cx="430" cy="230" r="16" fill="{{ node2 }}" stroke="none"/>
+        <circle cx="200" cy="250" r="12" fill="{{ node2 }}" stroke="none"/>
+        <circle cx="360" cy="360" r="34" fill="{{ node }}" stroke="none"/>
+        <circle cx="470" cy="410" r="10" fill="{{ node2 }}" stroke="none"/>
+        <circle cx="250" cy="430" r="18" fill="{{ node }}" stroke="none"/>
+        <line x1="300" y1="140" x2="430" y2="230"/><line x1="300" y1="140" x2="200" y2="250"/>
+        <line x1="200" y1="250" x2="360" y2="360"/><line x1="430" y1="230" x2="360" y2="360"/>
+        <line x1="360" y1="360" x2="470" y2="410"/><line x1="360" y1="360" x2="250" y2="430"/>
+      </g>
+    </svg>
+  {%- endif -%}
+</div>

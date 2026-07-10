@@ -1,1 +1,153 @@
-[]
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Myndspark",
+    "theme_version": "1.0.1",
+    "theme_author": "Preston Vawdrey",
+    "theme_documentation_url": "https://myndspark.com",
+    "theme_support_url": "https://myndspark.com"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand Colors"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary Blue",
+        "default": "#2E4CC8"
+      },
+      {
+        "type": "color",
+        "id": "color_primary_dark",
+        "label": "Blue Deep",
+        "default": "#1F379E"
+      },
+      {
+        "type": "color",
+        "id": "color_secondary",
+        "label": "Teal Accent",
+        "default": "#3DB8AB"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Star Rating (Amber)",
+        "default": "#E8B23A"
+      },
+      {
+        "type": "color",
+        "id": "color_bg_light",
+        "label": "Background",
+        "default": "#FAFBFE"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Body Text",
+        "default": "#23283A"
+      },
+      {
+        "type": "color",
+        "id": "color_text_light",
+        "label": "Muted Text",
+        "default": "#565B73"
+      },
+      {
+        "type": "color",
+        "id": "color_white",
+        "label": "White",
+        "default": "#FFFFFF"
+      },
+      {
+        "type": "color",
+        "id": "color_border",
+        "label": "Card Border",
+        "default": "#E7EAF2"
+      },
+      {
+        "type": "color",
+        "id": "color_tint",
+        "label": "Blue Tint (surfaces)",
+        "default": "#EEF1FB"
+      },
+      {
+        "type": "color",
+        "id": "color_dark",
+        "label": "Brand Navy (dark sections)",
+        "default": "#16265A"
+      },
+      {
+        "type": "color",
+        "id": "color_darker",
+        "label": "Footer Navy (darkest)",
+        "default": "#10193A"
+      }
+    ]
+  },
+  {
+    "name": "Logo & Header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image"
+      },
+      {
+        "type": "range",
+        "id": "logo_width",
+        "label": "Logo Width (px)",
+        "min": 80,
+        "max": 300,
+        "step": 10,
+        "default": 160,
+        "unit": "px"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show Announcement Bar",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Announcement Text",
+        "default": "Free shipping on orders over $50 — 90% of patients show improvement"
+      }
+    ]
+  },
+  {
+    "name": "Social",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube",
+        "label": "YouTube URL"
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  }
+]

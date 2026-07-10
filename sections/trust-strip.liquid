@@ -1,0 +1,63 @@
+{% schema %}
+{
+  "name": "Trust Strip",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Developed with clinicians · Trusted by therapists"
+    },
+    {
+      "type": "text",
+      "id": "stat1_num",
+      "label": "Stat 1 Number",
+      "default": "90%"
+    },
+    {
+      "type": "text",
+      "id": "stat1_txt",
+      "label": "Stat 1 Text",
+      "default": "saw improvement"
+    },
+    {
+      "type": "text",
+      "id": "stat2_num",
+      "label": "Stat 2 Number",
+      "default": "6"
+    },
+    {
+      "type": "text",
+      "id": "stat2_txt",
+      "label": "Stat 2 Text",
+      "default": "brain functions"
+    },
+    {
+      "type": "text",
+      "id": "stat3_num",
+      "label": "Stat 3 Number",
+      "default": "100+"
+    },
+    {
+      "type": "text",
+      "id": "stat3_txt",
+      "label": "Stat 3 Text",
+      "default": "activities"
+    }
+  ],
+  "presets": [{ "name": "Trust Strip" }]
+}
+{% endschema %}
+
+<section class="trust-strip">
+  <div class="trust-strip__inner">
+    <div class="trust-strip__label">{{ section.settings.label }}</div>
+    <div class="trust-strip__stats">
+      <div class="trust-strip__stat"><span class="num">{{ section.settings.stat1_num }}</span><span class="txt">{{ section.settings.stat1_txt }}</span></div>
+      <div class="trust-strip__divider"></div>
+      <div class="trust-strip__stat"><span class="num">{{ section.settings.stat2_num }}</span><span class="txt">{{ section.settings.stat2_txt }}</span></div>
+      <div class="trust-strip__divider"></div>
+      <div class="trust-strip__stat"><span class="num">{{ section.settings.stat3_num }}</span><span class="txt">{{ section.settings.stat3_txt }}</span></div>
+    </div>
+  </div>
+</section>

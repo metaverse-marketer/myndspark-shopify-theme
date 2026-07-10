@@ -6,8 +6,23 @@
         "badge": "Cognitive Efficiency Tool",
         "heading": "A multisensory approach to improving brain function",
         "subtitle": "The complete at-home cognitive rehabilitation kit. 100+ hands-on activities targeting all 6 brain functions. No screens required.",
-        "primary_cta_text": "Get Your Kit — $210",
-        "secondary_cta_text": "How It Works"
+        "primary_cta_text": "Get Your Kit",
+        "primary_cta_url": "shopify://products/myndspark-cognitive-efficiency-tool",
+        "secondary_cta_text": "How It Works",
+        "secondary_cta_url": ""
+      }
+    },
+    "trust-strip": {
+      "type": "trust-strip",
+      "disabled": true,
+      "settings": {
+        "label": "Developed with clinicians · Trusted by therapists",
+        "stat1_num": "90%",
+        "stat1_txt": "saw improvement",
+        "stat2_num": "6",
+        "stat2_txt": "brain functions",
+        "stat3_num": "100+",
+        "stat3_txt": "activities"
       }
     },
     "three-steps": {
@@ -15,6 +30,14 @@
       "settings": {
         "heading": "3 Critical Steps to Improve Brain Function",
         "subheading": "A simple daily protocol that works"
+      }
+    },
+    "six-functions": {
+      "type": "six-functions",
+      "settings": {
+        "label": "One kit, six functions",
+        "heading": "Train every area of the brain",
+        "body": "Each activity is color-coded to the brain function it targets — so you always know you're building a balanced routine. The kit combines activities to work multiple functions at once, forging new connections."
       }
     },
     "mission": {
@@ -55,9 +78,21 @@
       "settings": {
         "heading": "Experience Myndspark Today",
         "subheading": "Boost your brain power. Join the 90% who've seen improvement.",
-        "button_text": "Get Your Kit — $210"
+        "button_text": "Get Your Kit — $210",
+        "button_url": ""
       }
     }
   },
-  "order": ["hero", "three-steps", "mission", "differentiators", "showcase", "testimonials", "upsell", "cta"]
+  "order": [
+    "hero",
+    "trust-strip",
+    "three-steps",
+    "six-functions",
+    "mission",
+    "differentiators",
+    "showcase",
+    "testimonials",
+    "upsell",
+    "cta"
+  ]
 }

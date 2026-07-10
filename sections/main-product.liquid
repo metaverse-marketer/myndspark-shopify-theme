@@ -38,6 +38,12 @@
           <span class="review-count">(Based on customer feedback)</span>
         </div>
 
+        <div class="product-badges">
+          <span class="product-badge"><svg width="15" height="15"><use href="#icon-clinical"/></svg>Clinically proven</span>
+          <span class="product-badge"><svg width="15" height="15"><use href="#icon-screen-free"/></svg>Screen-free</span>
+          <span class="product-badge"><svg width="15" height="15"><use href="#icon-check"/></svg>Free shipping over $50</span>
+        </div>
+
         <div class="product-info__price">
           {{ product.price | money }}
           {% if product.compare_at_price > product.price %}
@@ -59,6 +65,11 @@
             <li>Therapeutic activity pieces (blocks, Brock string, puzzles)</li>
             <li>Daily routine notepad for tracking progress</li>
           </ul>
+        </div>
+
+        <div class="fn-block">
+          <div class="fn-block__label">Trains all six brain functions</div>
+          {% render 'function-chips' %}
         </div>
 
         <div class="product-info__actions">
