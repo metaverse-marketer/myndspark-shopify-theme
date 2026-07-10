@@ -144,38 +144,48 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ==================== BUTTONS (pill-shaped) ==================== */
 .btn {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   padding: 13px 26px;
-  border-radius: var(--radius-pill);
-  font-family: var(--font-body);
+  border-radius: 999px;
+  font-family: inherit;
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   border: none;
   transition: all var(--transition);
   text-decoration: none;
+  line-height: 1.4;
+  box-sizing: border-box;
 }
 
 .btn--primary {
-  background: var(--color-primary);
-  color: white;
+  background: #3B5BDB !important;
+  color: #FFFFFF !important;
 }
-.btn--primary:hover { background: var(--color-primary-dark); color: white; }
+.btn--primary:hover {
+  background: #2B48C7 !important;
+  color: #FFFFFF !important;
+}
 
 .btn--secondary {
-  background: var(--color-tint);
-  color: var(--color-primary);
+  background: #EEF0FA !important;
+  color: #3B5BDB !important;
 }
-.btn--secondary:hover { background: var(--color-border); }
+.btn--secondary:hover {
+  background: #E8EAF0 !important;
+}
 
 .btn--outline {
-  background: transparent;
-  color: var(--color-text);
-  border: 1.5px solid var(--color-border);
+  background: transparent !important;
+  color: #2D3141 !important;
+  border: 1.5px solid #E8EAF0;
 }
-.btn--outline:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.btn--outline:hover {
+  border-color: #3B5BDB;
+  color: #3B5BDB !important;
+}
 
 .btn--large { padding: 16px 34px; font-size: 17px; }
 .btn--small { padding: 9px 18px; font-size: 13px; }
@@ -249,18 +259,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__image { position: relative; }
 .hero__image img { border-radius: var(--radius-card); box-shadow: var(--shadow-md); width: 100%; }
 
-.hero__price-badge {
-  position: absolute; top: -16px; right: -16px;
-  background: var(--color-primary); color: white;
-  border-radius: var(--radius-pill);
-  padding: 12px 24px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  box-shadow: var(--shadow-md);
-  text-align: center;
-}
-.hero__price-badge .price-amount { font-size: 24px; line-height: 1; }
-.hero__price-badge .price-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; }
+/* Price badge removed — price lives on the CTA button */
 
 /* ==================== THREE STEPS ==================== */
 .three-steps { padding: 64px 0; background: var(--color-white); }
