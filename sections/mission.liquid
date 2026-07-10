@@ -25,7 +25,7 @@
         {% if section.settings.mission_image %}
           <img src="{{ section.settings.mission_image | image_url: width: 700 }}" alt="Myndspark Kit" loading="lazy">
         {% else %}
-          <img src="{{ 'kit-open-top.png' | asset_url }}" alt="Myndspark Kit Contents" loading="lazy">
+          <img src="{{ 'kit-open-top.png' | asset_url }}" alt="Myndspark Kit Contents" loading="lazy" onerror="this.src='https://i0.wp.com/myndspark.com/wp-content/uploads/2022/04/CogET_Kit-Open-Top.png?w=1200&ssl=1'">
         {% endif %}
       </div>
 
