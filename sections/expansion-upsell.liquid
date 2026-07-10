@@ -1,0 +1,55 @@
+{% schema %}
+{
+  "name": "Expansion Upsell",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Complete Your Kit"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Add 84 expansion cards to unlock even more cognitive challenges"
+    }
+  ],
+  "presets": [{ "name": "Expansion Upsell" }]
+}
+{% endschema %}
+
+<section class="upsell">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="upsell__card">
+      <div class="upsell__card__image">
+        <img src="{{ 'whole-kit.png' | asset_url }}" alt="Myndspark Expansion Cards" loading="lazy">
+      </div>
+      <div class="upsell__card__content">
+        <h3>Myndspark Expansion Cards</h3>
+        <p>84 downloadable expansion cards with corresponding answer keys. Perfect for extending your cognitive training beyond the core kit.</p>
+
+        <ul class="upsell__features">
+          <li>12 Deductive Math cards</li>
+          <li>12 Solutions cards</li>
+          <li>12 Deductive Reasoning cards</li>
+          <li>12 Odd One Out cards</li>
+          <li>12 Sentence Scramble cards</li>
+          <li>12 Synonyms cards</li>
+          <li>12 Visual Math cards</li>
+        </ul>
+
+        <div class="upsell__price">
+          <span class="sale">$20</span>
+        </div>
+
+        <a href="/products/myndspark-expansion-cards" class="btn btn--primary btn--full">Add Expansion Cards</a>
+      </div>
+    </div>
+  </div>
+</section>

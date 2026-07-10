@@ -1,0 +1,54 @@
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [],
+  "presets": [{ "name": "Footer" }]
+}
+{% endschema %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        {% if settings.logo %}
+          <img src="{{ settings.logo | image_url: width: 200 }}" alt="{{ shop.name }}" width="160">
+        {% else %}
+          <span style="font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: white;">Myndspark</span>
+        {% endif %}
+        <p>A multisensory approach to improving brain function. Designed by occupational therapists for cognitive rehabilitation at home.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="/products/myndspark-cognitive-efficiency-tool">Cognitive Tool</a></li>
+          <li><a href="/products/myndspark-expansion-cards">Expansion Cards</a></li>
+          <li><a href="/cart">Cart</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/pages/about">About Us</a></li>
+          <li><a href="/pages/contact">Contact</a></li>
+          <li><a href="/blogs/news">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p style="font-size: 14px; margin-bottom: 12px;">Get cognitive health tips and product updates.</p>
+        {% form 'customer' %}
+          <input type="email" name="contact[email]" placeholder="Your email address" required>
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <button type="submit" class="btn btn--primary btn--full">Subscribe</button>
+        {% endform %}
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: '%Y' }} Myndspark. All rights reserved. &middot; Center St, Orem, UT 84057 &middot; support@myndspark.com</p>
+    </div>
+  </div>
+</footer>

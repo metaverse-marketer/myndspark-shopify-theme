@@ -1,0 +1,115 @@
+{% schema %}
+{
+  "name": "Product Main",
+  "settings": []
+}
+{% endschema %}
+
+<section class="product-page">
+  <div class="container">
+    <div class="product-layout">
+      <div class="product-gallery">
+        <div class="product-gallery__main" id="ProductGalleryMain">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | image_url: width: 800 }}"
+                 alt="{{ product.title | escape }}"
+                 id="ProductMainImage"
+                 width="800" height="auto">
+          {% else %}
+            <img src="{{ 'whole-kit.png' | asset_url }}" alt="{{ product.title | escape }}" id="ProductMainImage">
+          {% endif %}
+        </div>
+        {% if product.images.size > 1 %}
+        <div class="product-gallery__thumbs">
+          {% for image in product.images limit: 4 %}
+            <div class="product-gallery__thumb {% if forloop.first %}active{% endif %}" data-image="{{ image | image_url: width: 800 }}">
+              <img src="{{ image | image_url: width: 160 }}" alt="{{ product.title | escape }}">
+            </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-info__title">{{ product.title }}</h1>
+
+        <div class="product-info__rating">
+          <span class="stars">★★★★★</span>
+          <span class="review-count">(Based on customer feedback)</span>
+        </div>
+
+        <div class="product-info__price">
+          {{ product.price | money }}
+          {% if product.compare_at_price > product.price %}
+            <span style="text-decoration: line-through; font-size: 20px; color: var(--color-text-light); margin-left: 12px;">{{ product.compare_at_price | money }}</span>
+          {% endif %}
+        </div>
+
+        <div class="product-info__description">
+          {{ product.description }}
+        </div>
+
+        <div class="product-info__features">
+          <h4>What's Included</h4>
+          <ul>
+            <li>Educational workbook with 30+ activities</li>
+            <li>Multi-sensory challenges for every activity</li>
+            <li>Therapy cards for all 6 cognitive functions</li>
+            <li>Activity index and daily therapeutic routine</li>
+            <li>Therapeutic activity pieces (blocks, Brock string, puzzles)</li>
+            <li>Daily routine notepad for tracking progress</li>
+          </ul>
+        </div>
+
+        <div class="product-info__actions">
+          <div class="qty-selector">
+            <button type="button" onclick="this.nextElementSibling.stepDown()">−</button>
+            <input type="number" name="quantity" value="1" min="1" id="Quantity" form="product-form">
+            <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+          </div>
+
+          <form action="/cart/add" method="post" enctype="multipart/form-data" id="product-form" style="flex: 1;">
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <button type="submit" class="btn btn--primary btn--large btn--full">
+              <span class="btn__text">Add to Cart — {{ product.price | money }}</span>
+            </button>
+          </form>
+        </div>
+
+        {% if product.handle == 'myndspark-cognitive-efficiency-tool' %}
+        <div class="expansion-upsell">
+          <div class="expansion-upsell__image">🃏</div>
+          <div class="expansion-upsell__content">
+            <h4>Add Expansion Cards?</h4>
+            <p>84 additional downloadable cards. Deductive math, reasoning, synonyms, visual math, and more.</p>
+            <div class="expansion-upsell__add">
+              <span class="expansion-upsell__price">$20</span>
+              <a href="/products/myndspark-expansion-cards" class="btn btn--secondary" style="padding: 10px 20px; font-size: 14px;">View Cards</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="product-info__meta">
+          {% if product.type %}<div class="product-info__meta-row"><span class="product-info__meta-label">Type</span><span class="product-info__meta-value">{{ product.type }}</span></div>{% endif %}
+          {% if product.vendor %}<div class="product-info__meta-row"><span class="product-info__meta-label">Brand</span><span class="product-info__meta-value">{{ product.vendor }}</span></div>{% endif %}
+          <div class="product-info__meta-row"><span class="product-info__meta-label">Weight</span><span class="product-info__meta-value">3.9 lbs</span></div>
+          <div class="product-info__meta-row"><span class="product-info__meta-label">Dimensions</span><span class="product-info__meta-value">12.5 × 10 × 4.5 in</span></div>
+          <div class="product-info__meta-row"><span class="product-info__meta-label">Shipping</span><span class="product-info__meta-value">Free shipping on orders over $50</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Thumbnail gallery
+  document.querySelectorAll('.product-gallery__thumb').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+      var img = document.getElementById('ProductMainImage');
+      img.src = this.dataset.image;
+    });
+  });
+</script>

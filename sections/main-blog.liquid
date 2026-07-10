@@ -1,0 +1,35 @@
+{% schema %}
+{
+  "name": "Blog",
+  "settings": []
+}
+{% endschema %}
+
+<section style="padding: 48px 0 80px;">
+  <div class="container">
+    <h1 style="font-size: 36px; margin-bottom: 32px;">{{ blog.title | default: 'News & Blog' }}</h1>
+
+    {% if blog.articles.size > 0 %}
+      <div class="showcase-grid">
+        {% for article in blog.articles limit: 9 %}
+          <div class="showcase-card">
+            {% if article.image %}
+              <a href="{{ article.url }}" class="showcase-card__image">
+                <img src="{{ article.image | image_url: width: 600 }}" alt="{{ article.title | escape }}" loading="lazy">
+              </a>
+            {% endif %}
+            <div class="showcase-card__content">
+              <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+              <p>{{ article.excerpt_or_content | strip_html | truncate: 120 }}</p>
+              <a href="{{ article.url }}" style="font-weight: 600; font-size: 14px;">Read more →</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div style="text-align: center; padding: 60px 0; color: var(--color-text-light);">
+        <p>Blog articles coming soon.</p>
+      </div>
+    {% endif %}
+  </div>
+</section>

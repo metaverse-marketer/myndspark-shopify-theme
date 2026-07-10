@@ -1,0 +1,52 @@
+{% schema %}
+{
+  "name": "Three Steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "3 Critical Steps to Improve Brain Function"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A simple daily protocol that works"
+    }
+  ],
+  "presets": [{ "name": "Three Steps" }]
+}
+{% endschema %}
+
+<section class="three-steps" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-card__icon">🏃</div>
+        <span class="step-card__number">Step 1</span>
+        <h3>Feed the Brain</h3>
+        <p>Bring blood flow and nutrients to the body and brain through exercise. Activities such as biking, walking, jogging, or using exercise equipment like an elliptical.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__icon">🧠</div>
+        <span class="step-card__number">Step 2</span>
+        <h3>Engage the Brain</h3>
+        <p>Activate the brain by completing a minimum of 1 activity in each of the 6 functions of the brain: Attention, Memory, Logic &amp; Reasoning, Speech &amp; Language, Motor &amp; Balance, and Visual Processing.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-card__icon">😴</div>
+        <span class="step-card__number">Step 3</span>
+        <h3>Rest the Brain</h3>
+        <p>Help recovery of the brain by sitting or lying in a dark room without any distractions &mdash; no sound, no screens. Give your brain the quiet it needs to rebuild.</p>
+      </div>
+    </div>
+  </div>
+</section>

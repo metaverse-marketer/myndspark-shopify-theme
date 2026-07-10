@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "badge": "Cognitive Efficiency Tool",
+        "heading": "A multisensory approach to improving brain function",
+        "subtitle": "The complete at-home cognitive rehabilitation kit. 100+ hands-on activities targeting all 6 brain functions. No screens required.",
+        "primary_cta_text": "Get Your Kit — $210",
+        "secondary_cta_text": "How It Works"
+      }
+    },
+    "three-steps": {
+      "type": "three-steps",
+      "settings": {
+        "heading": "3 Critical Steps to Improve Brain Function",
+        "subheading": "A simple daily protocol that works"
+      }
+    },
+    "mission": {
+      "type": "mission",
+      "settings": {
+        "heading": "Our Mission"
+      }
+    },
+    "differentiators": {
+      "type": "differentiators",
+      "settings": {
+        "heading": "What Makes Us Different?",
+        "subheading": "There are various groups that build brain games and activities claiming to enhance brain function. We focus on those who have already suffered from brain injuries."
+      }
+    },
+    "showcase": {
+      "type": "product-showcase",
+      "settings": {
+        "heading": "What's Inside the Kit",
+        "subheading": "Everything you need to target all 6 cognitive functions"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "heading": "What Our Customers Have to Say"
+      }
+    },
+    "upsell": {
+      "type": "expansion-upsell",
+      "settings": {
+        "heading": "Complete Your Kit",
+        "subheading": "Add 84 expansion cards to unlock even more cognitive challenges"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Experience Myndspark Today",
+        "subheading": "Boost your brain power. Join the 90% who've seen improvement.",
+        "button_text": "Get Your Kit — $210"
+      }
+    }
+  },
+  "order": ["hero", "three-steps", "mission", "differentiators", "showcase", "testimonials", "upsell", "cta"]
+}

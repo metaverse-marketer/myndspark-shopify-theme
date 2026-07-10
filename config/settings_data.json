@@ -1,0 +1,40 @@
+{
+  "current": {
+    "color_primary": "#3B5BDB",
+    "color_primary_dark": "#2B48C7",
+    "color_secondary": "#3DB8AB",
+    "color_accent": "#F5A623",
+    "color_bg_light": "#FAFBFE",
+    "color_text": "#2D3141",
+    "color_text_light": "#565B73",
+    "color_white": "#FFFFFF",
+    "color_border": "#E8EAF0",
+    "color_tint": "#EEF0FA",
+    "font_heading": "hanken_grotesk_n7",
+    "font_body": "hanken_grotesk_n4",
+    "font_mono": "ibm_plex_mono_n5",
+    "logo_width": 160,
+    "show_announcement": true,
+    "announcement_text": "Free shipping on orders over $50 — 90% of patients show improvement"
+  },
+  "presets": {
+    "Myndspark Default": {
+      "color_primary": "#3B5BDB",
+      "color_primary_dark": "#2B48C7",
+      "color_secondary": "#3DB8AB",
+      "color_accent": "#F5A623",
+      "color_bg_light": "#FAFBFE",
+      "color_text": "#2D3141",
+      "color_text_light": "#565B73",
+      "color_white": "#FFFFFF",
+      "color_border": "#E8EAF0",
+      "color_tint": "#EEF0FA",
+      "font_heading": "hanken_grotesk_n7",
+      "font_body": "hanken_grotesk_n4",
+      "font_mono": "ibm_plex_mono_n5",
+      "logo_width": 160,
+      "show_announcement": true,
+      "announcement_text": "Free shipping on orders over $50 — 90% of patients show improvement"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{% schema %}
+{
+  "name": "Differentiators",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Makes Us Different?"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "There are various groups that build brain games and activities claiming to enhance brain function. We focus on those who have already suffered from brain injuries."
+    }
+  ],
+  "presets": [{ "name": "Differentiators" }]
+}
+{% endschema %}
+
+<section class="differentiators">
+  <div class="container">
+    <div class="section-header">
+      <h2>{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="diff-grid">
+      <div class="diff-card">
+        <div class="diff-card__icon">✋</div>
+        <div>
+          <h3>Hands-On, Screen-Free</h3>
+          <p>Activities that do not require an app or computer screen. Those with brain injuries can be light sensitive with symptoms like eye strain, blurry vision, and double vision.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card__icon">🔗</div>
+        <div>
+          <h3>Multi-Sensory Integration</h3>
+          <p>We combine activities to target multiple brain functions simultaneously. Building new connections between various parts of the brain is key to cognitive improvement and rehabilitation.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card__icon">🌐</div>
+        <div>
+          <h3>Holistic Brain Approach</h3>
+          <p>We look at the brain holistically and avoid focusing on only one particular area. We include activities that allow various areas of the brain to function together.</p>
+        </div>
+      </div>
+
+      <div class="diff-card">
+        <div class="diff-card__icon">🏥</div>
+        <div>
+          <h3>Clinically Proven</h3>
+          <p>Our treatment protocol has been proven successful in clinical settings. 90% of patients have shown improvement in their overall symptoms.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

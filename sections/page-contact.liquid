@@ -1,0 +1,86 @@
+{% schema %}
+{
+  "name": "Contact Page",
+  "settings": []
+}
+{% endschema %}
+
+<section class="about-hero">
+  <div class="container">
+    <h1>Get in Touch</h1>
+    <p style="font-size: 19px; color: var(--color-text-light);">We're here to help with any questions about the Cognitive Efficiency Tool.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+
+      <div class="contact-info__item">
+        <div class="contact-info__icon">📧</div>
+        <div>
+          <div style="font-weight: 600;">Email</div>
+          <div style="color: var(--color-text-light);"><a href="mailto:support@myndspark.com">support@myndspark.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-info__item">
+        <div class="contact-info__icon">📍</div>
+        <div>
+          <div style="font-weight: 600;">Location</div>
+          <div style="color: var(--color-text-light);">Center St, Orem, UT 84057</div>
+        </div>
+      </div>
+
+      <div class="contact-info__item">
+        <div class="contact-info__icon">🧠</div>
+        <div>
+          <div style="font-weight: 600;">Product Support</div>
+          <div style="color: var(--color-text-light);">Questions about your kit? We offer guidance on getting started and maximizing your results.</div>
+        </div>
+      </div>
+
+      <div class="contact-info__item">
+        <div class="contact-info__icon">🔄</div>
+        <div>
+          <div style="font-weight: 600;">Returns</div>
+          <div style="color: var(--color-text-light);">Not satisfied? Contact us within 30 days for a full refund.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2 style="margin-bottom: 24px;">Send Us a Message</h2>
+      {% form 'contact' %}
+        {% if form.posted_successfully? %}
+          <div style="background: var(--color-primary); color: white; padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+            ✅ Thank you! We'll get back to you within 24 hours.
+          </div>
+        {% endif %}
+
+        <div class="form-group">
+          <label for="ContactName">Name</label>
+          <input type="text" id="ContactName" name="contact[name]" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ContactEmail">Email</label>
+          <input type="email" id="ContactEmail" name="contact[email]" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ContactPhone">Phone (optional)</label>
+          <input type="tel" id="ContactPhone" name="contact[phone]">
+        </div>
+
+        <div class="form-group">
+          <label for="ContactMessage">Message</label>
+          <textarea id="ContactMessage" name="contact[body]" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--large btn--full">Send Message</button>
+      {% endform %}
+    </div>
+  </div>
+</div>

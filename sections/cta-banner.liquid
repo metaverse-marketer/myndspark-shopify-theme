@@ -1,0 +1,41 @@
+{% schema %}
+{
+  "name": "CTA Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Experience Myndspark Today"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Boost your brain power. Join the 90% who've seen improvement."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Your Kit — $210"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [{ "name": "CTA Banner" }]
+}
+{% endschema %}
+
+<section class="cta-section">
+  <div class="container">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.subheading }}</p>
+    <a href="{{ section.settings.button_url | default: '/products/myndspark-cognitive-efficiency-tool' }}" class="btn btn--primary btn--large">
+      {{ section.settings.button_text }}
+    </a>
+  </div>
+</section>

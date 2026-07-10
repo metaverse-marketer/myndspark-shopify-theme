@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "heading": "What Customers Say"
+      }
+    },
+    "cta": {
+      "type": "cta-banner",
+      "settings": {
+        "heading": "Ready to Start Your Recovery?",
+        "subheading": "Join thousands improving their cognitive function at home.",
+        "button_text": "Shop Now"
+      }
+    }
+  },
+  "order": ["main", "testimonials", "cta"]
+}
