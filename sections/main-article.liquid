@@ -1,0 +1,58 @@
+{% schema %}
+{
+  "name": "Article",
+  "settings": []
+}
+{% endschema %}
+
+<style>
+  .article-hero { max-width: 760px; margin: 0 auto; text-align: center; padding: 56px 24px 8px; }
+  .article-hero h1 { font-size: 38px; line-height: 1.15; color: var(--color-dark); letter-spacing: -0.025em; margin: 12px 0 16px; }
+  .article-hero .article-meta { font-size: 14px; color: var(--color-text-light); }
+  .article-featured { max-width: 860px; margin: 32px auto 0; padding: 0 24px; }
+  .article-featured img { width: 100%; border-radius: var(--radius-card); box-shadow: var(--shadow-md); }
+  .article-body { max-width: 720px; margin: 0 auto; padding: 40px 24px 48px; font-size: 17px; line-height: 1.7; color: var(--color-text); }
+  .article-body h1, .article-body h2 { font-size: 26px; color: var(--color-dark); letter-spacing: -0.02em; margin: 40px 0 14px; line-height: 1.25; }
+  .article-body h3 { font-size: 20px; color: var(--color-dark); margin: 32px 0 10px; }
+  .article-body p { margin-bottom: 18px; }
+  .article-body ul, .article-body ol { margin: 0 0 18px 24px; }
+  .article-body li { margin-bottom: 8px; }
+  .article-body img { max-width: 100%; border-radius: var(--radius-card); margin: 24px 0; }
+  .article-body blockquote { border-left: 3px solid var(--color-primary); padding-left: 20px; font-style: italic; color: var(--color-text-light); margin: 24px 0; }
+  .article-footer { max-width: 720px; margin: 0 auto; padding: 0 24px 64px; }
+</style>
+
+<article>
+  <div class="article-hero">
+    <span class="mono-label">{{ blog.title }}</span>
+    <h1>{{ article.title }}</h1>
+    <div class="article-meta">
+      {{ article.published_at | date: '%B %-d, %Y' }}
+      {%- if article.author != blank %} &middot; {{ article.author }}{% endif %}
+    </div>
+  </div>
+
+  {% if article.image %}
+    <div class="article-featured">
+      <img src="{{ article.image | image_url: width: 1200 }}" alt="{{ article.image.alt | default: article.title | escape }}">
+    </div>
+  {% endif %}
+
+  <div class="article-body">
+    {{ article.content }}
+  </div>
+
+  <div class="article-footer">
+    <a href="{{ blog.url }}" style="font-weight: 600; font-size: 15px;">&larr; Back to all articles</a>
+  </div>
+</article>
+
+<section class="cta-section cta-section--navy">
+  {% render 'node-motif', variant: 'cta' %}
+  <div class="container">
+    <span class="mono-label">Start Today</span>
+    <h2>Ready to Put This Into Practice?</h2>
+    <p>The Cognitive Efficiency Tool turns the science into a daily routine.</p>
+    <a href="/products/myndspark-cognitive-efficiency-tool" class="btn btn--on-dark btn--large">Get Your Kit</a>
+  </div>
+</section>
