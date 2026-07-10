@@ -399,6 +399,13 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex; align-items: center; justify-content: center;
   color: white; font-weight: 700; font-size: 16px;
 }
+.testimonial-card__avatar-img {
+  width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+  border: 2px solid var(--color-border);
+}
+.founder-card__photo {
+  display: block !important;
+}
 .testimonial-card__name { font-weight: 700; font-size: 14px; color: var(--color-text); }
 .testimonial-card__role {
   font-family: var(--font-mono), monospace; font-size: 11px;
