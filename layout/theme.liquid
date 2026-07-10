@@ -37,6 +37,9 @@
 </head>
 
 <body class="template-{{ template.name | handle }}">
+  {% comment %}SVG icon sprite — loaded once, referenced via <use href="#icon-name">{% endcomment %}
+  {% render 'icon-sprite' %}
+
   <a class="skip-to-content" href="#MainContent">Skip to content</a>
 
   {% sections 'header-group' %}
